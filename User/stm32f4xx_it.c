@@ -30,6 +30,13 @@
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f4xx_it.h"
 #include "main.h"
+#include "control.h"
+#include "Can_Int.h"
+#include "defines.h"
+
+mChecksum		Checksum;
+board 			B1;
+board				B2;
 
 /** @addtogroup Template_Project
   * @{
@@ -154,6 +161,24 @@ void TIM3_IRQHandler(void){
 		}	
 		TIM_ClearITPendingBit (TIM3, TIM_FLAG_Update);
 }
+// 50ms send CAN data to Board2
+void TIM4_IRQHandler(void){
+	if(TIM_GetITStatus(TIM4,TIM_IT_Update) != RESET){
+		can1_buffer.FrameLable_Tx = label_master;
+		can1_buffer.CanData_Tx.mb[0] = 'E';
+		can1_buffer.CanData_Tx.mb[1] = 'S';
+		can1_buffer.CanData_Tx.mb[2] = 'M';
+		can1_buffer.CanData_Tx.mb[3] = B1.Mode;
+		//checksum CAN_Tx
+		for( int i = 0; i < 4; i++){
+			Checksum.Tx += can1_buffer.CanData_Tx.mb[i];
+		}
+		can1_buffer.CanData_Tx.mb[4] = Checksum.Tx;
+		can1_buffer.CanData_Tx.mb[5] = '$';
+		mCANwrite(can1_buffer.FrameLable_Tx,&can1_buffer,6);
+    TIM_ClearITPendingBit(TIM4, TIM_IT_Update);
+  }
+}
 
 void DMA1_Stream1_IRQHandler(void){ //nhan gia tri
 		char checksum_Rx = 0;
@@ -167,6 +192,10 @@ void DMA1_Stream1_IRQHandler(void){ //nhan gia tri
 			}	
 		}
 }
+
+
+
+
 /******************************************************************************/
 /*                 STM32F4xx Peripherals Interrupt Handlers                   */
 /*  Add here the Interrupt Handler for the used peripheral(s) (PPP), for the  */

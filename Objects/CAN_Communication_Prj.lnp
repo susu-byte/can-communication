@@ -3,6 +3,7 @@
 ".\objects\stm32f4xx_it.o"
 ".\objects\startup_stm32f40_41xxx.o"
 ".\objects\system_stm32f4xx.o"
+".\objects\can_int.o"
 ".\objects\uart.o"
 ".\objects\btn.o"
 ".\objects\led.o"

@@ -41,3 +41,10 @@
 .\objects\main.o: .\LED\led.h
 .\objects\main.o: .\UART\uart.h
 .\objects\main.o: .\TIMER\timer.h
+.\objects\main.o: .\CAN\Can_Int.h
+.\objects\main.o: .\CAN\defines.h
+.\objects\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\objects\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
+.\objects\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h

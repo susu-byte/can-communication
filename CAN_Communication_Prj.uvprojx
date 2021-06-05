@@ -339,7 +339,7 @@
               <MiscControls></MiscControls>
               <Define>USE_STDPERIPH_DRIVER, STM32F40_41xxx, HSE_VALUE=8000000</Define>
               <Undefine></Undefine>
-              <IncludePath>.\BTN;.\CONTROL;.\LED;.\Libraries\CMSIS\Device\ST\STM32F4xx\Include;.\Libraries\STM32F4xx_StdPeriph_Driver\inc;.\Libraries\CMSIS\Include;.\TIMER;.\UART;.\User;.\Libraries\CMSIS\Device\ST\STM32F4xx\Include;..\can-communication</IncludePath>
+              <IncludePath>.\BTN;.\CONTROL;.\LED;.\Libraries\CMSIS\Include;.\TIMER;.\UART;.\User;.\Libraries\CMSIS\Device\ST\STM32F4xx\Include;..\can-communication;.\CAN;.\Libraries\STM32F4xx_StdPeriph_Driver\inc</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -437,6 +437,23 @@
         </Group>
         <Group>
           <GroupName>CAN</GroupName>
+          <Files>
+            <File>
+              <FileName>Can_Int.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\CAN\Can_Int.c</FilePath>
+            </File>
+            <File>
+              <FileName>Can_Int.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\CAN\Can_Int.h</FilePath>
+            </File>
+            <File>
+              <FileName>defines.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\CAN\defines.h</FilePath>
+            </File>
+          </Files>
         </Group>
         <Group>
           <GroupName>UART</GroupName>

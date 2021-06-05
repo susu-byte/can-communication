@@ -42,3 +42,10 @@
 .\objects\stm32f4xx_it.o: .\LED\led.h
 .\objects\stm32f4xx_it.o: .\UART\uart.h
 .\objects\stm32f4xx_it.o: .\TIMER\timer.h
+.\objects\stm32f4xx_it.o: .\CAN\Can_Int.h
+.\objects\stm32f4xx_it.o: .\CAN\defines.h
+.\objects\stm32f4xx_it.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\stm32f4xx_it.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\stm32f4xx_it.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\objects\stm32f4xx_it.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
+.\objects\stm32f4xx_it.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h

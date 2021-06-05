@@ -13,12 +13,13 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 /* Exported types ------------------------------------------------------------*/
-extern struct board{
+typedef struct {
 	char LED_Status;
 	char Mode;
-};
-extern struct board B1; 
-extern struct board B2; 
+} board;
+
+extern board B1;
+extern board B2;
 /* Exported constants --------------------------------------------------------*/
 /* Exported macro ------------------------------------------------------------*/
 /* Exported functions ------------------------------------------------------- */
