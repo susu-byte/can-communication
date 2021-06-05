@@ -164,7 +164,7 @@ void TIM3_IRQHandler(void){
 // 50ms send CAN data to Board2
 void TIM4_IRQHandler(void){
 	if(TIM_GetITStatus(TIM4,TIM_IT_Update) != RESET){
-		can1_buffer.FrameLable_Tx = label_master;
+		can1_buffer.FrameLable_Tx = label_slave;
 		can1_buffer.CanData_Tx.mb[0] = 'E';
 		can1_buffer.CanData_Tx.mb[1] = 'S';
 		can1_buffer.CanData_Tx.mb[2] = 'M';
