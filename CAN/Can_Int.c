@@ -19,8 +19,7 @@ mCANbuffer	can1_buffer;
  * \Baudrate:
  * \Filter mode:
  * \IDs address be accepts: 
- *      label_master
- *      label_slave 
+
 *****************************************************************************/
 void CAN1_Configure( void )
 { 
