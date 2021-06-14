@@ -8,6 +8,7 @@
   ******************************************************************************/
  /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "Can_Int.h""
 
 /** @addtogroup Template_Project
   * @{
@@ -27,6 +28,6 @@
   */
 int main(void)
 {
-  
+  CAN1_Configure();
 }
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
